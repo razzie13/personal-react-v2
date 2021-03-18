@@ -1,0 +1,189 @@
+$HEADER-FOOTER-COLOUR: #000000;
+$HEADER-FOOTER-TEXT-COLOUR: #FFFFFF;
+$HEADER-FOOTER-WIDTH: 100%;
+
+$BLACK: #000000;
+$WHITE: #FFFFFF;
+
+// COLOUR PALETTES
+
+$YELLOW: #feca57;
+$ORANGE: #ff9f43;
+$RED: #ee5253;
+$LIGHTBLUE: #48dbfb;
+$DARKBLUE: #54a0ff;
+$LIGHTGRAY: #c8d6e5;
+$DARKGRAY: #576574;
+$GREEN: #10ac84;
+$LIGHTCYAN: #00d2d3;
+$DARKCYAN: #01a3a4;
+$PURPLE: #f368e0;
+
+$MAX-WIDTH: 1900px;
+
+body  {
+    margin: 0;
+    padding: 0;
+}
+
+.App  {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav a  {
+    color: $WHITE;
+    text-decoration: none;
+    text-transform: lowercase;
+}
+
+header  {
+    background-color: $HEADER-FOOTER-COLOUR;
+    width: $HEADER-FOOTER-WIDTH;
+    color: $HEADER-FOOTER-TEXT-COLOUR;
+
+    padding: 20px 40px;
+    box-sizing: border-box;
+
+    h2  {
+        margin: -10px 0 -20px 0;
+        padding-top: 10px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+
+    h6  {
+        margin-bottom: -20px;
+        letter-spacing: 1px;
+    }
+}
+
+footer  {
+    background-color: $HEADER-FOOTER-COLOUR;
+    width: $HEADER-FOOTER-WIDTH;
+    // height: 50px;
+    color: $HEADER-FOOTER-TEXT-COLOUR;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+}
+
+ul  {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+
+    li  {
+        margin-left: 40px;
+        letter-spacing: 1px;
+        font-weight: 500;
+    }
+}
+
+main  {
+    width: 100%;
+    max-width: $MAX-WIDTH;
+    height: 100%;
+    background-color: $LIGHTGRAY;
+    flex: 1;
+
+    h1  {
+        text-transform: uppercase;
+    }
+
+    .skill-description  {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        height: 60%;
+    }
+    
+    .left-half  {
+        width: 40%;
+        height: 80%;
+    }
+
+    .right-half {
+        width: 40%;
+        height: 80%;
+    }
+
+    .featured-knowledge  {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+
+        div  {
+            font-weight: bold;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+    }
+}
+
+.centered  {
+    width: 100%;
+    max-width: $MAX-WIDTH;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px 25px;
+    box-sizing: border-box;
+}
+
+.webdev  {
+    background-color: $DARKGRAY;
+    color: $WHITE;
+}
+
+.react  {
+    background-color: $LIGHTCYAN;
+    color: $BLACK
+}
+
+.wordpress  {
+    background-color: $DARKGRAY;
+    color: $WHITE
+}
+
+.nodejs  {
+    background-color: $GREEN;
+    color: $WHITE
+}
+
+.javascript  {
+    background-color: $YELLOW;
+    color: $BLACK
+}
+
+.shopify  {
+    background-color: $GREEN;
+    color: $WHITE
+}
+
+.css  {
+    background-color: $ORANGE;
+    color: $WHITE
+}
+
+.static-sites  {
+    background-color: $PURPLE;
+    color: $WHITE
+}
+
+.webpage-design  {
+    background-color: $DARKBLUE;
+    color: $WHITE
+}
+
+.critical-thinking  {
+    background-color: $LIGHTGRAY;
+    color: $BLACK
+}
+
+.experience  {
+    background-color: $LIGHTBLUE;
+    color: $BLACK;
+}
