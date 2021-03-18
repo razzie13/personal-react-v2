@@ -15,15 +15,17 @@ export default class App extends Component {
     this.changeBackgroundColour = this.changeBackgroundColour.bind(this)
   
     this.state = {
-       pageColour: null,
+       pageColour: "webdev",
        siteAuthorName: "Greg Rasmussen"
     }
   }
 
   changeBackgroundColour = backgroundColour => {
+  document.body.classList.remove(this.state.pageColour)
     this.setState({
       pageColour: backgroundColour
   })    
+  document.body.classList.add(this.state.pageColour)
   console.log(this.state.pageColour)
   }
   
