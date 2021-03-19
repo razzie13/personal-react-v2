@@ -1,6 +1,10 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { fab } from '@fortawesome/free-brands-svg-icons'
+import { faTerminal,faReact, faWordpress, faNode, faJs, faShopify, faCss3Alt, faExclamation, faLowVision, faBrain, faClock } from '@fortawesome/free-solid-svg-icons'
+
 import MainSkills from './MainSkills'
 import MainSkillsProjects from './MainSkillsProjects'
 import MainFeaturedKnowledge from './MainFeaturedKnowledge'
@@ -16,7 +20,7 @@ export default class Main extends Component {
                 {
                     skill: 'Front-End Web Developer',
                     className: 'webdev',
-                    faIcon: 'fab fa-react',
+                    faIcon: 'faTerminal',
                     breakdown: ['Web Sites', 'Web Applications'],
                     blurb: '',
                     demoProject1: '',
@@ -25,7 +29,7 @@ export default class Main extends Component {
                 {
                     skill: 'Interactive React Applications',
                     className: 'react',
-                    faIcon: 'fab fa-react',
+                    faIcon: 'faReact',
                     breakdown: ['Axios'],
                     blurb: '',
                     demoProject1: '',
@@ -34,7 +38,7 @@ export default class Main extends Component {
                 {
                     skill: 'Customized WordPress Sites',
                     className: 'wordpress',
-                    faIcon: 'fab fa-wordpress',
+                    faIcon: 'faWordpress',
                     breakdown: ['Theme Development', 'Yoast SEO', 'Advanced Custom Fields'],
                     blurb: 'Making a site that can be managed with zero technical experience is an amazing thing.',
                     demoProject1: 'grocerystoreinsider.com',
@@ -43,7 +47,7 @@ export default class Main extends Component {
                 {
                     skill: 'Helpful NodeJS Applications',
                     className: 'nodejs',
-                    faIcon: 'fab fa-node',
+                    faIcon: 'faNode',
                     breakdown: ['MongoDB Integration', 'API Creation', 'Express'],
                     blurb: '',
                     demoProject1: 'gregrasmussen.com/store-system/webstore',
@@ -52,7 +56,7 @@ export default class Main extends Component {
                 {
                     skill: 'Useful JavaScript Tools',
                     className: 'javascript',
-                    faIcon: 'fab fa-js',
+                    faIcon: 'faJs',
                     breakdown: ['Fetch API', 'Calculations', ''],
                     blurb: '',
                     demoProject1: '',
@@ -61,7 +65,7 @@ export default class Main extends Component {
                 {
                     skill: 'Successful Shopify Stores',
                     className: 'shopify',
-                    faIcon: 'fab fa-shopify',
+                    faIcon: 'faShopify',
                     breakdown: ['Liquid', '', ''],
                     blurb: 'Your store needs to reflect your brand image and have a chance to tell its story.',
                     demoProject1: '',
@@ -70,7 +74,7 @@ export default class Main extends Component {
                 {
                     skill: 'Cascading Style Sheets',
                     className: 'css',
-                    faIcon: 'fab fa-css3-alt',
+                    faIcon: 'faCss3Alt',
                     breakdown: ['Responsive Sizing', 'SASS', 'Styled Components Package for React'],
                     blurb: 'There are many ways to put your best work out there for the world to see.',
                     demoProject1: '',
@@ -79,7 +83,7 @@ export default class Main extends Component {
                 {
                     skill: 'Great Static Sites',
                     className: 'static-sites',
-                    faIcon: 'fas fa-exclamation',
+                    faIcon: 'faExclamation',
                     breakdown: ['HTML Landing Pages', 'Gatsby', 'Bootstrap'],
                     blurb: 'Not everything needs to be fancy. Sometimes less really can be more.',
                     demoProject1: '',
@@ -88,7 +92,7 @@ export default class Main extends Component {
                 {
                     skill: 'Thoughtful Webpage Design',
                     className: 'webpage-design',
-                    faIcon: 'fas fa-low-vision',
+                    faIcon: 'faLowVision',
                     breakdown: ['UI/UX', 'Information', 'Accessibility'],
                     blurb: 'Regardless of screen size or reader ability, the web and its content needs to be easily accessible to all.',
                     demoProject1: '',
@@ -97,7 +101,7 @@ export default class Main extends Component {
                 {
                     skill: 'Focused Critical Thinking',
                     className: 'critical-thinking',
-                    faIcon: 'fas fa-brain',
+                    faIcon: 'faBrain',
                     breakdown: ['Problem Solving', 'Creativity', 'Time Management'],
                     blurb: 'The Zone is one of my favourite places to be. Planning ahead makes me even more effective.',
                     demoProject1: '',
@@ -106,7 +110,7 @@ export default class Main extends Component {
                 {
                     skill: 'Years Of Experience',
                     className: 'experience',
-                    faIcon: 'far fa-clock',
+                    faIcon: 'faClock',
                     breakdown: ['Table-Based Design', 'Flash Animation', 'Paint Shop Pro'],
                     blurb: 'Technologies and methods come and go, but theres always been a love for design and development.',
                     demoProject1: '',
@@ -116,18 +120,6 @@ export default class Main extends Component {
              index: 0
         }
     }
-
-
-    // skillClickHandler = () => {
-    //     window.addEventListener('click', () => {
-    //         this.setState({
-    //             index: this.state.index + 1
-    //         })
-    //         console.log('state: index ' + this.state.index)    
-    //     }
-    // ,{passive: true})
-    // }
-    
 
 
     componentDidMount()  {
@@ -182,6 +174,7 @@ export default class Main extends Component {
         return (
             <main className={this.state.data[this.state.index].className}>
                 <h1>{this.state.data[this.state.index].skill}</h1>
+                <FontAwesomeIcon icon={this.state.data[this.state.index].faIcon} />
                 {this.state.moreDetails === false ? <MainSkills blurb={this.state.data[this.state.index].blurb} /> : <MainSkillsProjects project1={this.state.data[this.state.index].demoProject1} project2={this.state.data[this.state.index].demoProject2}/>}
                 <MainFeaturedKnowledge skill1={this.state.data[this.state.index].breakdown[0]} skill2={this.state.data[this.state.index].breakdown[1]} skill3={this.state.data[this.state.index].breakdown[2]} />
             </main>
